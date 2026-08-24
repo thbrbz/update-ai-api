@@ -25,15 +25,16 @@ Retorne APENAS os três títulos em formato de lista como no exemplo abaixo:
 Transcrição:
 '''
 {transcription}
-'''`.trim()
-    }
+'''`.trim(),
+    },
   })
 
   await prisma.prompt.create({
     data: {
       title: 'Descrição YouTube',
-      template: `Seu papel é gerar uma descrição sucinta para um vídeo do YouTube.
-  
+      template:
+        `Seu papel é gerar uma descrição sucinta para um vídeo do YouTube.
+
 Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar a descrição.
 
 A descrição deve possuir no máximo 80 palavras em primeira pessoa contendo os pontos principais do vídeo.
@@ -52,8 +53,8 @@ Descrição.
 Transcrição:
 '''
 {transcription}
-'''`.trim()
-    }
+'''`.trim(),
+    },
   })
 }
 
